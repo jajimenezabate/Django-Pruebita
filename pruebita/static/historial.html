@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> <!--INTEGRACION CON BOXICONS-->
+    <title>"Historial"" </title>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid cabezera" >
+          <a href="index.html">
+            <img class="mx-auto d-block logo" src="{%  'imagenes/logo.png'  %}" alt="DecoPlantas" >
+          </a>
+          <div class="social-media"> <!-- CONTENEDOR REDES SOCIALES-->
+            <a href="https:/www.facebook.com" class="social-media-icon" target="_blank"> <!-- ETIQUETA PARA ENLAZAR LINKS-->
+                <i class='bx bxl-facebook'></i> <!--ETIQUETA I CONVIERTE EN CURSIVA, Boxicons redes sociales-->
+            </a>
+            <a href="https:/www.twitter.com" class="social-media-icon" target="_blank">
+                <i class='bx bxl-twitter' ></i> <!--Boxicons redes sociales-->
+            </a>
+            <a href="https:/www.instagram.com" class="social-media-icon" target="_blank">
+                <i class='bx bxl-instagram' ></i> <!--Boxicons redes sociales-->
+            </a>
+          </div>
+        </div>
+
+        
+
+        <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid nav">
+          
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
+              </li>
+              
+              
+              <div id="planta" class="shopping_container clearfix">
+                <div class="shopping_cart"> <a href="MostrarCarro.html" title="Ver mi carrito de compra" rel="nofollow">
+                    <img src="{% 'https://decoplantas.cl/themes/logancee/img/icon-cart.png'  %}">
+                    <span class="carro_quantity">0</span>
+                    <span class="carro_producto">Item - </span>
+                    <span class="carro_total"> $0 </span> </a>
+                  <div class="cart_block" style="width: 290px;">
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <ul class="nav justify-content-end">
+              <li class="nav-item dropdown">
+                <img src="{%  'imagenes/usuario.png'  %}" alt="">
+              </li>
+              <li class="nav-item dropdown">
+                
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="historial.html">Historial Pedidos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="seguimiento.html">Seguimiento</a></li>
+                </ul>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+      </nav> 
+    </header>
+    <div class="mensaje">
+        <i class='bx bxs-car'></i>
+        <span >ENTREGAS EXPRESS ENTRE 24 A 96 HRS HABILES</span>
+        <i class='bx bxs-car'></i>
+      </div>
+        
+        
+        <h1 class="mt-5">Historial de pedidos</h1>
+        <h2 style="font-size: 36px;">Estos son los pedidos que ha realizado desde que creó su cuenta.</h2>
+        <div>
+            <a class="btn btn-success d-flex justify-content-center mb-3" id="boton">Mostrar Historial</a>
+        </div>
+        
+        <table class="table-primary mb-5">
+            
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Pago</th>
+                </tr>
+            </thead>
+            <tbody id="res">
+
+            </tbody>
+               
+            
+        </table>
+
+        <!-- Footer -->
+  <div class="container-fluid">
+    <div class="container-fluid ">
+      <footer class="text-center text-lg-start text-dark" style="background-color: #a7e590">
+        <section class="container-fluid">
+          <div class="container-fuid text-center text-md-start ">
+
+            <div class="row ">
+
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Informacion Compañia -->
+                <h6 class="text-uppercase fw-bold mt-3">Información</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px" />
+                <p>
+                  Tienda online dedicada a vender plantas de Interior y Exterior en diferentes tamaños
+                  de maseteros.
+                </p>
+              </div>
+
+              <!-- Seccion Categoria-->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links de los Categoria -->
+                <h6 class="text-uppercase fw-bold mt-3">Categoria</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px" />
+                <p>
+                  <a href="productos.html" class="text-dark">Catálogo</a>
+                </p>
+                
+              </div>
+
+              <!-- Seccion de Contactos -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold mt-3">Contactos</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px" />
+                <p><i class="fas fa-envelope mr-3"></i> alumno.duoc@duocuc.cl</p>
+                <p><i class="fas fa-phone mr-3"></i> +56 9 2343 5678</p>
+                <p><i class="fas fa-print mr-3"></i> +56 9 2586 1278</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </div>
+    
+    <script src="historial.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+        "nombre":"Ficus enano",
+        "fecha": "25/Jun/2021",
+        "precio": 24990,
+        "pago": "WebPay Plus"
+    },
+    {
+        "nombre":"Aphelandra",
+        "fecha": "10/Dic/2020",
+        "precio": 9990,
+        "pago": "Tranferencia"
+    },
+    {
+        "nombre":"Aphelandra",
+        "fecha": "04/Jul/2019",
+        "precio": 9990,
+        "pago": "WebPay Plus"
+    },
+    {
+        "nombre":"Cyclamen",
+        "fecha": "03/Mar/2019",
+        "precio": 4990,
+        "pago": "WebPay Plus"
+    }
+]
